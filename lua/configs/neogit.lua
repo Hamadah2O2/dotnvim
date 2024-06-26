@@ -1,6 +1,16 @@
 local neogit = require("neogit")
 
-neogit.setup {
+neogit.setup({
+  graph_style = "unicode",
+  signs = {
+    -- { CLOSED, OPENED }
+    hunk = { "", "" },
+    item = { " ", " " },
+    section = { " ", " " },
+  },
+})
+
+local default = {
   -- Hides the hints at the top of the status buffer
   disable_hint = false,
   -- Disables changing the buffer highlights based on where the cursor is.
