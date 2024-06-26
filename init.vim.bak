@@ -1,0 +1,157 @@
+set nocompatible            " disable compatibility to old-time vi
+set showmatch               " show matching
+set ignorecase              " case insensitive
+set mouse=v                 " middle-click paste with
+set hlsearch                " highlight search
+set incsearch               " incremental search
+set tabstop=2               " number of columns occupied by a tab
+set softtabstop=2           " see multiple spaces as tabstops so <BS> do>
+set expandtab               " converts tabs to white space
+set shiftwidth=2            " width for autoinden:s
+set autoindent              " indent a new line the same amount as the l>
+set number                  " add line numbers
+set relativenumber          " relative number on
+" set wildmode=longest,list   " get bash-like tab completions
+set wildmode=full   
+" set cc=80                  " set an 80 column border for good coding s>
+filetype plugin indent on   "allow auto-indenting depending on file type
+syntax on                   " syntax highlighting
+set mouse=a                 " enable mouse click
+set clipboard=unnamedplus   " using system clipboard
+filetype plugin on
+set cursorline              " highlight current cursorline
+set linebreak               " Break words by words
+set breakindent
+set ttyfast                 " Speed up scrolling in Vim
+set sidescroll=1            " Sidescrolling
+set so=999
+set splitbelow              " Split on below
+" set nowrap                  " No Wrap Code
+" set spell                 " enable spell check (may need to download l>
+" set noswapfile            " disable creating swap file
+" set backupdir=~/.cache/vim " Directory to store backup files.
+set foldlevel=20
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
+"###########################
+"##### Plugin Manajer ######
+"###########################
+
+call plug#begin('~/.vim/plugged')
+    " Appearance
+    Plug 'dracula/vim'
+    Plug 'folke/tokyonight.nvim'
+    Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+    "Plug 'vim-airline/vim-airline'
+    "Plug 'vim-airline/vim-airline-themes'
+    Plug 'romgrk/barbar.nvim'
+    Plug 'xiyaowong/transparent.nvim'
+    Plug 'stevearc/dressing.nvim'
+
+    " Explorer
+    " Plug 'preservim/nerdtree'
+    Plug 'nvim-tree/nvim-tree.lua'
+
+    " Icon
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'nvim-tree/nvim-web-devicons'
+
+    " Completion
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'mattn/emmet-vim'
+    Plug 'neoclide/coc-emmet'
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+    " Plug 'Jezda1337/nvim-html-css'
+
+    " Helper & Tools
+    Plug 'numToStr/Comment.nvim'
+    "Plug 'NeogitOrg/neogit'
+    Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+    Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+    Plug 'ryanmsnyder/toggleterm-manager.nvim'
+    Plug 'phaazon/hop.nvim'
+    Plug 'dstein64/vim-startuptime'
+    Plug 'akinsho/flutter-tools.nvim'
+    Plug 'mbbill/undotree'
+    Plug 'windwp/nvim-autopairs'
+    Plug 'Pocco81/auto-save.nvim'
+    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+    " Plug 'smoka7/multicursors.nvim'
+    " Plug 'mhinz/vim-startify'
+
+    " Colorer
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'HiPhish/nvim-ts-rainbow2' 
+    Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'uga-rosa/ccc.nvim'
+    Plug 'Fymyte/rasi.vim'
+
+    Plug 'nvim-lua/plenary.nvim'
+
+    Plug 'AndrewRadev/tagalong.vim'
+    Plug 'tpope/vim-surround'
+
+    Plug 'edluffy/hologram.nvim'
+    Plug '3rd/image.nvim'
+    "
+    Plug 'mfussenegger/nvim-treehopper'
+
+    Plug 'stevearc/conform.nvim'
+call plug#end()
+
+"lua require'colorizer'.setup()
+"lua require'colortils'.setup()
+
+"###################
+"### Appearance ####
+"###################
+
+" colorscheme tokyonight
+colorscheme catppuccin
+" runtime colors.vim
+" VMulti_COLOR
+  " hi! link VM_Mono   DiffText
+  " hi! link VM_Extend DiffAdd
+  " hi! link VM_Cursor Visual
+  " hi! link VM_Insert PmenuSel
+set termguicolors
+" set statusline=%F%m%r%h%w[%L,%c%V]%P
+" let g:airline_left_sep = ''
+" let g:airline_left_alt_sep = ''
+" let g:airline_right_sep = ''
+" let g:airline_right_alt_sep = ''
+let g:airline_theme='base16'
+
+"Changing default NERDTree arrows
+" let g:NERDTreeDirArrowExpandable = '▸'
+" let g:NERDTreeDirArrowCollapsible = '▾'
+
+"#########################
+"### Other      setup ####
+"#########################
+
+" Start NERDTree when Vim starts with a directory argument.
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+"     \ execute 'NvimTreeClose' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+
+"##################
+"#### include #####
+"##################
+runtime keymap.vim
+runtime! plugins/enabled/**/*.{vim,lua}
+runtime plugins/outside/coc.vim
+lua require('malua')
+
+runtime php.vim
+
+lua << EOF
+require('ccc').setup({
+	  -- highlighter = {
+	  --   auto_enable = true,
+	  -- },
+	})
+EOF

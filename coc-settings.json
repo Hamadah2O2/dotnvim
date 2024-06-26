@@ -1,0 +1,30 @@
+{
+    "html-css-support.styleSheets": [
+        "/home/zan/project/web/bootstrap-5.3.3-dist/css/bootstrap.min.css",
+        "public/assets/css/bootstrap.min.css",
+        "public/assets/css/style.css"
+    ],
+    "html-css-support.enabledLanguages": [
+        "html",
+        "vue",
+        "blade",
+        "htmldjango",
+        "typescriptreact",
+        "javascriptreact",
+        "php"
+    ],
+    "snippets.extends": {
+        "php": ["php", "html"],
+        "cpp": ["c"],
+        "javascriptreact": ["javascript"],
+        "typescript": ["javascript"]
+    },
+    "prettier.useTabs": true,
+    "prettier.tabWidth": 4,
+    "colors.enable": true,
+    "prettier.printWidth": 120,
+    "vimlsp.filetypes": [
+      "vim", 
+      "lua"
+    ]
+}
