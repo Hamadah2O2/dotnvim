@@ -1,10 +1,10 @@
 return {
 	"Pocco81/auto-save.nvim",
-  lazy = true,
-  cmd = "ASToggle",
-  keys = {
-    {"<leader>n"}
-  },
+	lazy = true,
+	cmd = "ASToggle",
+	keys = {
+		{ "<leader>n" },
+	},
 	config = function()
 		require("auto-save").setup({
 			enabled = false,
@@ -19,7 +19,7 @@ return {
 				return false -- can't save
 			end,
 			write_all_buffers = true, -- write all buffers when the current one meets `condition`
-			debounce_delay = 2535, -- saves the file at most every `debounce_delay` milliseconds
+			debounce_delay = 2200, -- saves the file at most every `debounce_delay` milliseconds
 		})
 		vim.api.nvim_set_keymap("n", "<leader>n", ":ASToggle<CR>", {})
 	end,
