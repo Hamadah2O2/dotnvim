@@ -1,16 +1,16 @@
 -- https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.lua
 vim.g.coc_global_extensions = {
-  "coc-marketplace",
+	"coc-marketplace",
 
-  "coc-html",
-  "coc-css",
-  "coc-tsserver",
-  "coc-json",
-  "coc-emmet",
+	"coc-html",
+	"coc-css",
+	"coc-tsserver",
+	"coc-json",
+	"coc-emmet",
 
-  "coc-highlight",
-  "coc-snippets",
-};
+	"coc-highlight",
+	"coc-snippets",
+}
 
 local keyset = vim.keymap.set
 -- Autocomplete
@@ -77,7 +77,7 @@ keyset("n", "<leader>rn", "<Plug>(coc-rename)", { silent = true })
 -- keyset("n", "<leader>f", "<Plug>(coc-format-selected)", { silent = true })
 
 -- Formatting Document
-keyset("n", "<leader>fm", "<cmd>Format<CR>", { silent=true, desc = "JUST FORMAT IT" })
+keyset("n", "<leader>fm", "<cmd>Format<CR>", { silent = true, desc = "JUST FORMAT IT" })
 
 -- Setup formatexpr specified filetype(s)
 vim.api.nvim_create_autocmd("FileType", {
