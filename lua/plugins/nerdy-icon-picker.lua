@@ -7,6 +7,6 @@ return {
     },
     cmd = 'Nerdy',
     keys = {
-      {"<leader>fi", ":Nerdy<cr>", desc = "Icons Picker", silent = true}
+      {"<leader>fi", ":Nerdy<cr>", desc = "Nerd Icons Picker", silent = true}
     }
 }
