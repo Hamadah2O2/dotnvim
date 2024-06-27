@@ -10,7 +10,6 @@ vim.g.coc_global_extensions = {
 
   "coc-highlight",
   "coc-snippets",
-  "coc-nav",
 };
 
 local keyset = vim.keymap.set
