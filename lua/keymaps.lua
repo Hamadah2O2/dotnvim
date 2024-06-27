@@ -7,12 +7,19 @@ vim.g.mapleader = " "
 -- ###################
 
 map("i", "jj", "<esc>", {})
-map({"n", "v"}, ";", ":", {})
--- quit 
-map({"n", "i", "v"}, "<C-q>", "<esc>:q<cr>", {
-  noremap = true,
-  silent = true,
+map({ "n", "v" }, ";", ":", {})
+-- quit
+map({ "n", "i", "v" }, "<C-q>", "<esc>:q<cr>", {
+	noremap = true,
+	silent = true,
 })
+
+-- insert navigation
+-- map("i", "<C-k>", "<Up>", opt1)
+-- map("i", "<C-j>", "<Down>", opt1)
+-- map("i", "<C-h>", "<C-Left>", opt1)
+-- map("i", "<C-l>", "<C-Right>", opt1)
+-- UMM THIS MAYBE BAD IDEA
 
 --  remap always center
 --  function! CentreCursor()
