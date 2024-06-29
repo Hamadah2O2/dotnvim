@@ -25,5 +25,7 @@
 	"colors.enable": true,
 	"prettier.printWidth": 120,
 	"vimlsp.filetypes": ["vim", "lua"],
-	"coc.preferences.formatOnSave": true
+	"coc.preferences.formatOnSave": true,
+	"workspace.ignoredFiletypes": ["NeogitStatus", "NeogitPopup", "NeogitCommitMessage"],
+	"coc.source.file.ignorePatterns": ["NeogitStatus", "NeogitPopup", "NeogitCommitMessage"]
 }
