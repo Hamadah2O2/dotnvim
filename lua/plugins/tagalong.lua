@@ -1,6 +1,7 @@
 return {
 	"AndrewRadev/tagalong.vim",
-  lazy = true,
+	enabled = false,
+	lazy = true,
 	ft = {
 		"eco",
 		"eelixir",

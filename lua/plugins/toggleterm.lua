@@ -12,15 +12,15 @@ return {
 		end,
 	},
 
-  -- toggleterm manager
+	-- toggleterm manager
 	{
 		"ryanmsnyder/toggleterm-manager.nvim",
-    keys = {
-      { "<leader>ft", "<cmd>Telescope toggleterm_manager<cr>", silent = true, desc = "Terminal manager" }
-    },
+		keys = {
+			{ "<leader>ft", "<cmd>Telescope toggleterm_manager<cr>", silent = true, desc = "Terminal manager" },
+		},
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
 		},
-    config = true,
+		config = true,
 	},
 }
