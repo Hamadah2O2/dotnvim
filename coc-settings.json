@@ -1,19 +1,8 @@
 {
 	"npm.binPath": "npm",
-	"html-css-support.styleSheets": [
-		"/home/zan/project/web/bootstrap-5.3.3-dist/css/bootstrap.min.css",
-		"public/assets/css/bootstrap.min.css",
-		"public/assets/css/style.css"
-	],
-	"html-css-support.enabledLanguages": [
-		"html",
-		"vue",
-		"blade",
-		"htmldjango",
-		"typescriptreact",
-		"javascriptreact",
-		"php"
-	],
+	"html-css-support.styleSheets": ["/home/zan/project/web/bootstrap-5.3.3-dist/css/bootstrap.min.css", "public/assets/css/bootstrap.min.css", "public/assets/css/style.css", "/src/style.css"],
+	"html-css-support.enabledLanguages": ["html", "vue", "blade", "htmldjango", "typescriptreact", "javascriptreact", "jsx", "php"],
+	"coc-class-css.enabledLanguages": ["html", "javascriptreact", "jsx"],
 	"snippets.extends": {
 		"php": ["php", "html"],
 		"cpp": ["c"],
@@ -27,5 +16,7 @@
 	"vimlsp.filetypes": ["vim", "lua"],
 	"coc.preferences.formatOnSave": true,
 	"workspace.ignoredFiletypes": ["NeogitStatus", "NeogitPopup", "NeogitCommitMessage"],
-	"coc.source.file.ignorePatterns": ["NeogitStatus", "NeogitPopup", "NeogitCommitMessage"]
+	"coc.source.file.ignorePatterns": ["NeogitStatus", "NeogitPopup", "NeogitCommitMessage"],
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+	"javascript.preferences.jsxAttributeCompletionStyle": "braces"
 }
