@@ -1,22 +1,22 @@
 -- https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.lua
 vim.g.coc_global_extensions = {
-	"coc-marketplace",
+  "coc-marketplace",
 
-	"coc-html",
-	"coc-css",
-	"coc-tsserver",
-	"coc-json",
-	"coc-emmet",
+  "coc-html",
+  "coc-css",
+  "coc-tsserver",
+  "coc-json",
+  "coc-emmet",
 
-	"coc-highlight",
-	"coc-snippets",
+  "coc-highlight",
+  "coc-snippets",
 }
 
 local keyset = vim.keymap.set
 -- Autocomplete
 function _G.check_back_space()
-	local col = vim.fn.col(".") - 1
-	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s") ~= nil
+  local col = vim.fn.col(".") - 1
+  return col == 0 or vim.fn.getline("."):sub(col, col):match("%s") ~= nil
 end
 
 -- Use Tab for trigger completion with characters ahead and navigate
@@ -30,8 +30,8 @@ keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 
 -- Make <CR> to accept selected completion item or notify coc.nvim to format
 -- <C-g>u breaks current undo, please make your own choice
-keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "<CR>"]], opts)
--- keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+-- keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "<CR>"]], opts)
+keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
 -- Use <c-j> to trigger snippets
 keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
@@ -51,23 +51,24 @@ keyset("n", "gr", "<Plug>(coc-references)", { silent = true })
 
 -- Use K to show documentation in preview window
 function _G.show_docs()
-	local cw = vim.fn.expand("<cword>")
-	if vim.fn.index({ "vim", "help" }, vim.bo.filetype) >= 0 then
-		vim.api.nvim_command("h " .. cw)
-	elseif vim.api.nvim_eval("coc#rpc#ready()") then
-		vim.fn.CocActionAsync("doHover")
-	else
-		vim.api.nvim_command("!" .. vim.o.keywordprg .. " " .. cw)
-	end
+  local cw = vim.fn.expand("<cword>")
+  if vim.fn.index({ "vim", "help" }, vim.bo.filetype) >= 0 then
+    vim.api.nvim_command("h " .. cw)
+  elseif vim.api.nvim_eval("coc#rpc#ready()") then
+    vim.fn.CocActionAsync("doHover")
+  else
+    vim.api.nvim_command("!" .. vim.o.keywordprg .. " " .. cw)
+  end
 end
+
 keyset("n", "K", "<CMD>lua _G.show_docs()<CR>", { silent = true })
 
 -- Highlight the symbol and its references on a CursorHold event(cursor is idle)
 vim.api.nvim_create_augroup("CocGroup", {})
 vim.api.nvim_create_autocmd("CursorHold", {
-	group = "CocGroup",
-	command = "silent call CocActionAsync('highlight')",
-	desc = "Highlight symbol under cursor on CursorHold",
+  group = "CocGroup",
+  command = "silent call CocActionAsync('highlight')",
+  desc = "Highlight symbol under cursor on CursorHold",
 })
 
 -- Symbol renaming
@@ -82,18 +83,18 @@ keyset("n", "<leader>fm", "<cmd>Format<CR>", { silent = true, desc = "JUST FORMA
 
 -- Setup formatexpr specified filetype(s)
 vim.api.nvim_create_autocmd("FileType", {
-	group = "CocGroup",
-	pattern = "typescript,json",
-	command = "setl formatexpr=CocAction('formatSelected')",
-	desc = "Setup formatexpr specified filetype(s).",
+  group = "CocGroup",
+  pattern = "typescript,json",
+  command = "setl formatexpr=CocAction('formatSelected')",
+  desc = "Setup formatexpr specified filetype(s).",
 })
 
 -- Update signature help on jump placeholder
 vim.api.nvim_create_autocmd("User", {
-	group = "CocGroup",
-	pattern = "CocJumpPlaceholder",
-	command = "call CocActionAsync('showSignatureHelp')",
-	desc = "Update signature help on jump placeholder",
+  group = "CocGroup",
+  pattern = "CocJumpPlaceholder",
+  command = "call CocActionAsync('showSignatureHelp')",
+  desc = "Update signature help on jump placeholder",
 })
 
 -- Apply codeAction to the selected region
