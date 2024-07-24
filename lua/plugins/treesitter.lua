@@ -17,6 +17,8 @@ return {
         "css",
         "php",
         "javascript",
+        "typescript",
+        "tsx",
         "json",
         "dart",
         "lua",
