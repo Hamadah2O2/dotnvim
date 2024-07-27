@@ -1,6 +1,6 @@
 require("telescope").setup({
-	defaults = {
-		prompt_prefix = "   ",
+  defaults = {
+    prompt_prefix = "   ",
     selection_caret = "  ",
     sorting_strategy = "ascending",
     layout_config = {
@@ -16,35 +16,38 @@ require("telescope").setup({
       -- height = 0.80,
       -- preview_cutoff = 120,
     },
-	},
-	pickers = {
-		-- Default configuration for builtin pickers goes here:
-		-- picker_name = {
-		--   picker_config_key = value,
-		--   ...
-		-- }
-		-- Now the picker_config_key will be applied every time you call this
-		-- builtin picker
-		find_files = {
-			theme = "dropdown",
-		},
-	},
-	extensions = {
-		-- Your extension configuration goes here:
-		-- extension_name = {
-		--   extension_config_key = value,
-		-- }
-		-- please take a look at the readme of the extension you want to configure
-	},
+    file_ignore_patterns = {
+      "^node_modules/"
+    }
+  },
+  pickers = {
+    -- Default configuration for builtin pickers goes here:
+    -- picker_name = {
+    --   picker_config_key = value,
+    --   ...
+    -- }
+    -- Now the picker_config_key will be applied every time you call this
+    -- builtin picker
+    find_files = {
+      theme = "dropdown",
+    },
+  },
+  extensions = {
+    -- Your extension configuration goes here:
+    -- extension_name = {
+    --   extension_config_key = value,
+    -- }
+    -- please take a look at the readme of the extension you want to configure
+  },
 })
 
 -- UI
 local sethl = vim.api.nvim_set_hl
 
-local diffc = vim.api.nvim_get_hl(0, {name = "DiffChange"})
-local normal = vim.api.nvim_get_hl(0, {name = "Normal"})
-local nfloat = vim.api.nvim_get_hl(0, {name = "NormalFloat"})
-local pmenu = vim.api.nvim_get_hl(0, {name = "PmenuSbar"})
+local diffc = vim.api.nvim_get_hl(0, { name = "DiffChange" })
+local normal = vim.api.nvim_get_hl(0, { name = "Normal" })
+local nfloat = vim.api.nvim_get_hl(0, { name = "NormalFloat" })
+local pmenu = vim.api.nvim_get_hl(0, { name = "PmenuSbar" })
 
 local bg1 = diffc.bg
 local bg2 = nfloat.bg
@@ -52,9 +55,9 @@ local bg3 = pmenu.bg
 local bg4 = "#201f34"
 local fg = diffc.fg
 
-local r1 = vim.api.nvim_get_hl(0, {name = "rainbow2"}).fg
-local r2 = vim.api.nvim_get_hl(0, {name = "rainbow4"}).fg
-local r3 = vim.api.nvim_get_hl(0, {name = "rainbow5"}).fg
+local r1 = vim.api.nvim_get_hl(0, { name = "rainbow2" }).fg
+local r2 = vim.api.nvim_get_hl(0, { name = "rainbow4" }).fg
+local r3 = vim.api.nvim_get_hl(0, { name = "rainbow5" }).fg
 
 -- Prompt
 sethl(0, "TelescopePromptBorder", {
@@ -68,8 +71,8 @@ sethl(0, "TelescopePromptNormal", {
 })
 
 sethl(0, 'TelescopePromptTitle', {
-    fg = r2,
-    bg = bg3,
+  fg = r2,
+  bg = bg3,
 })
 
 -- Results
@@ -83,8 +86,8 @@ sethl(0, "TelescopeResultsNormal", {
 })
 
 sethl(0, 'TelescopeResultsTitle', {
-    fg = r1,
-    bg = bg3,
+  fg = r1,
+  bg = bg3,
 })
 
 -- Preview
