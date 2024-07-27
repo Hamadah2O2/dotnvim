@@ -1,4 +1,3 @@
--- https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.lua
 vim.g.coc_global_extensions = {
   "coc-marketplace",
 
@@ -7,6 +6,9 @@ vim.g.coc_global_extensions = {
   "coc-tsserver",
   "coc-json",
   "coc-emmet",
+
+  "coc-react-redux-native-snippets",
+  "@hamadah2o2/coc-html-css-support",
 
   "coc-highlight",
   "coc-snippets",
