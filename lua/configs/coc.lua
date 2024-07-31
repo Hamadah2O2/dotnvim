@@ -6,6 +6,7 @@ vim.g.coc_global_extensions = {
   "coc-tsserver",
   "coc-json",
   "coc-emmet",
+  "coc-phpls",
 
   "coc-react-redux-native-snippets",
   "@hamadah2o2/coc-html-css-support",
