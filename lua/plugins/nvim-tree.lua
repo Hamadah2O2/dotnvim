@@ -48,18 +48,6 @@ return {
         highlight_git = true,
         highlight_opened_files = "none",
         icons = {
-          glyphs = {
-            git = {
-              unstaged = "",
-              staged = "",
-              unmerged = "",
-              renamed = "➜",
-              untracked = "",
-              deleted = "",
-              ignored = "◌",
-            }
-
-          }
         }
       },
     })
