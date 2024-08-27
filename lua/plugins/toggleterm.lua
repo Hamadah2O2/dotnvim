@@ -1,12 +1,12 @@
 return {
   {
     "akinsho/toggleterm.nvim",
-    tag = "*",
+    version = "*",
     event = "VeryLazy",
     config = function()
       require("toggleterm").setup({
         open_mapping = [[<c-t>]], -- or { [[<c-\>]], [[<c-¥>]] } if you also use a Japanese keyboard.
-        insert_mappings = false, -- whether or not the open mapping applies in insert mode
+        insert_mappings = false,  -- whether or not the open mapping applies in insert mode
         terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals
       })
     end,
