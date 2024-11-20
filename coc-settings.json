@@ -1,5 +1,5 @@
 {
-	"npm.binPath": "npm",
+	"npm.binPath": "pnpm",
 	"html-css-support.styleSheets": ["/home/zan/project/web/bootstrap-5.3.3-dist/css/bootstrap.min.css", "public/assets/css/bootstrap.min.css", "public/assets/css/style.css"],
 	"html-css-support.enabledLanguages": ["html", "vue", "blade", "htmldjango", "typescriptreact", "javascriptreact", "jsx", "php"],
 	"coc-class-css.enabledLanguages": ["html", "javascriptreact", "jsx"],
