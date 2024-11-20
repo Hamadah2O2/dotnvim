@@ -1,5 +1,4 @@
-# Zan personal Neovim configuration
+# Zan Neovim configuration
 
-My Neovim configuration, using Lazy.nvim, Telescope, and many more (yes, too many...)
+My Neovim configuration, using Lazy.nvim, Telescope, and many more...
 
-🙂
