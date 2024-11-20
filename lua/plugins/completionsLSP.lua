@@ -28,6 +28,10 @@ local command = {
 
 return {
   -- { "mattn/emmet-vim" },
+
+  -- -------------------------
+  -- Main Completion using coc
+  -- -------------------------
   {
     "neoclide/coc.nvim",
     branch = "release",
@@ -38,7 +42,6 @@ return {
     },
     cmd = command,
     dependencies = {
-      { "windwp/nvim-autopairs" },
       { "SirVer/ultisnips" },
       { "honza/vim-snippets" },
       -- { "neoclide/vim-jsx-improve" }, { "maxmellon/vim-jsx-pretty" },
@@ -55,6 +58,27 @@ return {
       -- For coc-html-css-support
       vim.cmd([[autocmd BufWritePost *.css CocCommand html-css-support.dispose]])
     end,
+  },
+
+  -- -------------------------------
+  -- plugins for automation (windwp)
+  -- -------------------------------
+  {
+    "windwp/nvim-ts-autotag",
+    -- enabled = false,
+    event = "InsertEnter",
+    config = function()
+      require('nvim-ts-autotag').setup({
+        opts = {
+          -- Defaults
+          enable_close = true,          -- Auto close tags
+          enable_rename = true,         -- Auto rename pairs of tags
+          enable_close_on_slash = false -- Auto close on trailing </
+        },
+      })
+    end,
+    -- use opts = {} for passing setup options
+    -- this is equalent to setup({}) function
   },
 
   {
