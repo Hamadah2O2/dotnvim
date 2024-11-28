@@ -27,6 +27,9 @@ map("i", "<Up>", "<C-o>gk", opt1)
 map("n", "j", "gj", opt1)
 map("n", "k", "gk", opt1)
 
+-- Php Arrow
+map("i", "-.", "->", opt1)
+
 -- insert navigation
 -- map("i", "<C-k>", "<Up>", opt1)
 -- map("i", "<C-j>", "<Down>", opt1)
