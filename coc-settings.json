@@ -9,13 +9,18 @@
 		"javascriptreact": ["javascript"],
 		"typescript": ["javascript"]
 	},
+  "emmet.includeLanguages": {"blade": "html", "php": "html"},
+  "emmet.syntaxProfiles": {"blade": "html"},
+  "tsserver.maxTsServerMemory": 3072,
+  "tailwindCSS.trace.server": "off",
 	"prettier.useTabs": true,
 	"prettier.tabWidth": 4,
 	"prettier.disableLanguages": ["markdown"],
+  "prettier.embeddedLanguageFormatting": "auto",
 	"colors.enable": true,
 	"prettier.printWidth": 920,
 	"vimlsp.filetypes": ["vim", "lua"],
-	"coc.preferences.formatOnSave": true,
+	"coc.preferences.formatOnSave": false,
 	"workspace.ignoredFiletypes": ["NeogitStatus", "NeogitPopup", "NeogitCommitMessage"],
 	"coc.source.file.ignorePatterns": ["NeogitStatus", "NeogitPopup", "NeogitCommitMessage"],
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
@@ -23,5 +28,8 @@
 	"snippets.ultisnips.pythonPrompt": false,
 	"markdownlint.config": {
 		"MD013": false
-	}
+	},
+	"blade.bladeFormatter.enable": true,
+  "blade.bladeFormatter.optIndentInnerHtml": true,
+  "intelephense.format.enable": false,
 }
