@@ -8,6 +8,7 @@ return {
 		{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live Grep", silent = true },
 		{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "List Buffers", silent = true },
 		{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help Tags", silent = true },
+		{ "<leader>fs", "<cmd>Telescope persisted<cr>", desc = "Persisted", silent = true },
 	},
 	config = function()
 		require("configs.telescope")
