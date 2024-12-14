@@ -1,3 +1,5 @@
+require("telescope").load_extension("persisted")
+
 require("telescope").setup({
   defaults = {
     prompt_prefix = "   ",
@@ -38,6 +40,9 @@ require("telescope").setup({
     --   extension_config_key = value,
     -- }
     -- please take a look at the readme of the extension you want to configure
+    persisted = {
+      layout_config = { width = 0.55, height = 0.55 }
+    }
   },
 })
 
