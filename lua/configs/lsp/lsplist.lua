@@ -11,7 +11,7 @@ local capabilities = cmp_nvim_lsp.default_capabilities()
 local capabilitiesHtml = vim.lsp.protocol.make_client_capabilities()
 -- capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-lspconfig["lua_ls"].setup({})
+-- Web lsp
 lspconfig.html.setup {
   capabilities = capabilities
 }
@@ -26,13 +26,26 @@ lspconfig["ts_ls"].setup({
   autostart = false,
   capabilities = capabilities,
 })
+lspconfig["tailwindcss"].setup({
+  autostart = false,
+  capabilities = capabilities,
+})
 lspconfig['intelephense'].setup({
   capabilities = capabilities,
 })
-lspconfig["emmet_ls"].setup({
+-- lspconfig["emmet_ls"].setup({
+lspconfig["emmet_language_server"].setup({
   filetypes = { "astro", "css", "eruby", "html", "htmldjango", "javascriptreact", "less", "pug", "sass", "scss", "svelte", "typescriptreact", "vue", "htmlangular", "php" },
   capabilities = capabilities,
 })
 lspconfig["lemminx"].setup{
+  capabilities = capabilities
+}
+
+-- lua lsp
+lspconfig["lua_ls"].setup({})
+
+-- C lsp
+lspconfig["clangd"].setup{
   capabilities = capabilities
 }
