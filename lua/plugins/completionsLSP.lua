@@ -35,10 +35,29 @@ return {
       'hrsh7th/cmp-cmdline',
       -- luasnip
       "saadparwaiz1/cmp_luasnip",
+      -- tailwindcss-colorizer-cmp
+      {
+        "roobert/tailwindcss-colorizer-cmp.nvim",
+        -- optionally, override the default options:
+        config = function()
+          require("tailwindcss-colorizer-cmp").setup({
+            color_square_width = 2,
+          })
+        end
+      }
     },
     config = function ()
       require('configs.cmp')
     end,
+  },
+
+  -- Conform
+  {
+    'stevearc/conform.nvim',
+    event = {"InsertEnter", "BufReadPre", "BufNewFile"},
+    config = function()
+      require("configs.conform")
+    end
   },
 
   -- ------------------------
