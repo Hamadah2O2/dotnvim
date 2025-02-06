@@ -44,7 +44,11 @@ cmp.setup({
     { name = 'path' },
     -- { name = 'vsnip' }, -- For vsnip users.
     -- { name = 'snippy' }, -- For snippy users.
-  })
+  }),
+  formatting = {
+    -- format = require("lspkind").cmp_format(),
+    format = require("tailwindcss-colorizer-cmp").formatter,
+  },
 })
 
 -- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
