@@ -8,6 +8,7 @@ vim.g.mapleader = " "
 
 map("i", "jj", "<esc>", {})
 map({ "n", "v" }, ";", ":", {})
+map({ "n" }, ":", ":!", {})
 -- quit
 map({ "n", "i", "v" }, "<C-q>", "<esc>:q<cr>", {
 	noremap = true,
@@ -29,6 +30,9 @@ map("n", "k", "gk", opt1)
 
 -- Php Arrow
 map("i", "-.", "->", opt1)
+
+-- Save
+map("n", "s", ":w<CR>", opt1)
 
 -- insert navigation
 -- map("i", "<C-k>", "<Up>", opt1)
