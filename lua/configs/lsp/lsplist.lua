@@ -13,6 +13,9 @@ local capabilitiesHtml = vim.lsp.protocol.make_client_capabilities()
 
 -- Web lsp
 lspconfig.html.setup {
+  init_options = {
+    provideFormatter = true
+  },
   capabilities = capabilities
 }
 lspconfig["eslint"].setup({
@@ -38,7 +41,7 @@ lspconfig["emmet_language_server"].setup({
   filetypes = { "astro", "css", "eruby", "html", "htmldjango", "javascriptreact", "less", "pug", "sass", "scss", "svelte", "typescriptreact", "vue", "htmlangular", "php" },
   capabilities = capabilities,
 })
-lspconfig["lemminx"].setup{
+lspconfig["gopls"].setup{
   capabilities = capabilities
 }
 
