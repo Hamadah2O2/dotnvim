@@ -44,11 +44,6 @@ lspconfig["emmet_language_server"].setup({
 lspconfig["gopls"].setup{
   capabilities = capabilities
 }
-
--- lua lsp
-lspconfig["lua_ls"].setup({})
-
--- C lsp
-lspconfig["clangd"].setup{
+lspconfig["lemminx"].setup{
   capabilities = capabilities
 }
