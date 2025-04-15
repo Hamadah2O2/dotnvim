@@ -15,7 +15,7 @@ conform.setup({
     ruby = { "standardrb" },
     markdown = { "prettierd", "prettier", stop_after_first = true },
     erb = { "htmlbeautifier" },
-    html = { "htmlbeautifier" },
+    html = { "prettierd" },
     bash = { "beautysh" },
     proto = { "buf" },
     rust = { "rustfmt" },
@@ -28,7 +28,7 @@ conform.setup({
 
 vim.keymap.set({ "n", "v" }, "<leader>l", function()
   conform.format({
-    async = false,
+    async = true,
     stop_after_first = true,
   })
 end, { desc = "Format file or range (in visual mode)" })
