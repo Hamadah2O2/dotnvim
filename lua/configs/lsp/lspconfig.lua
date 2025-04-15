@@ -43,6 +43,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
     opts.desc = "Show documentation for what is under cursor"
     keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
+    opts.desc = "Format file"
+    keymap.set("n", "<leader>fm", ":lua vim.lsp.buf.format()<CR>", opts) -- show definition, references
+
     opts.desc = "Restart LSP"
     keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
   end
