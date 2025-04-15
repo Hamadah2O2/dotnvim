@@ -18,18 +18,18 @@ return {
 	{
 		"dracula/vim",
 		priority = 1000,
-		lazy = true,
+		-- lazy = true,
     config = function ()
-      CS("dracula")
+      -- CS("dracula")
     end,
 	},
 
 	{
 		"folke/tokyonight.nvim",
 		priority = 1000,
-		lazy = true,
+		-- lazy = true,
     config = function ()
-      CS("tokyonight")
+      -- CS("tokyonight")
       vim.cmd("hi CursorLineNr guifg=#000")
     end,
 	},
