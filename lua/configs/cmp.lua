@@ -37,6 +37,16 @@ cmp.setup({
     ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
   }),
   sources = cmp.config.sources({
+    {
+      name = "html-css",
+      option = {
+        enable_on = { "html" },                 -- html is enabled by default
+        notify = false,
+        documentation = {
+          auto_show = true,                   -- show documentation on select
+        },
+      },
+    },
     { name = 'nvim_lsp' },
     { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.

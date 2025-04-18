@@ -48,6 +48,7 @@ return {
       'hrsh7th/cmp-cmdline',
       -- luasnip
       "saadparwaiz1/cmp_luasnip",
+      "Jezda1337/nvim-html-css",
       -- tailwindcss-colorizer-cmp
       {
         "roobert/tailwindcss-colorizer-cmp.nvim",
