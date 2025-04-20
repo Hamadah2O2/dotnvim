@@ -2,7 +2,7 @@
 local cmp = require 'cmp'
 
 -- load vscode style snippets
-require("luasnip.loaders.from_vscode").lazy_load({})
+require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets/codium" })
 -- require("luasnip.loaders.from_vscode").lazy_load({paths = "~/.config/nvim/sbwahsnip"})
 require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/snippets/lua" })
 require("luasnip.loaders.from_snipmate").lazy_load({ paths = "~/.config/nvim/snippets/snipmate" })
