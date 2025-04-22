@@ -97,10 +97,10 @@ sethl(0, 'TelescopeResultsTitle', {
 
 -- Preview
 sethl(0, "TelescopePreviewBorder", {
-  bg = bg4,
-  fg = bg4,
+  bg = bg2,
+  fg = bg2,
 })
 
 sethl(0, "TelescopePreviewNormal", {
-  bg = bg4,
+  bg = bg2,
 })
