@@ -17,6 +17,7 @@ vim.cmd([[
 return {
 	"mg979/vim-visual-multi",
   disabled = false,
+  event = "VeryLazy",
 	branch = "master",
 	keys = { "<C-d>", "<C-Down>", "<C-Up>" },
 }
