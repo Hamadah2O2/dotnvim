@@ -11,6 +11,7 @@ return {
     -- lazy = true,
 		priority = 1000,
     config = function ()
+      require("configs.catppuccin")
       CS("catppuccin")
     end,
 	},
