@@ -8,7 +8,6 @@ vim.g.mapleader = " "
 
 map("i", "jj", "<esc>", {})
 map({ "n", "v" }, ";", ":", {})
-map({ "n" }, ":", ":!", {})
 -- quit
 map({ "n", "i", "v" }, "<C-q>", "<esc>:q<cr>", {
 	noremap = true,
