@@ -21,7 +21,10 @@ return {
     require("nvim-treesitter.configs").setup({
       indent = {
         enable = true,
-        disable = { "html" }
+        disable = {
+          "html",
+          "toml"
+        }
       },
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
       ensure_installed = {
