@@ -40,6 +40,8 @@ return {
         "vim",
         "vimdoc",
         "query",
+        "toml",
+        "yaml",
         "markdown",
         "markdown_inline",
       },
