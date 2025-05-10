@@ -46,6 +46,7 @@ return {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
+      'hrsh7th/cmp-calc',
       -- luasnip
       "saadparwaiz1/cmp_luasnip",
       "Jezda1337/nvim-html-css",

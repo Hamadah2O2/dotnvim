@@ -48,6 +48,7 @@ cmp.setup({
       },
     },
     { name = 'nvim_lsp' },
+    { name = 'calc' },
     { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.
     { name = 'buffer' },
