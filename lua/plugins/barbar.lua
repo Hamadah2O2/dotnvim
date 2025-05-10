@@ -173,6 +173,9 @@ return {
 		map("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
 		-- Close buffer
 		map("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
+		map("n", "<Space>bca", "<Cmd>BufferCloseAllButCurrent<CR>", opts)
+		map("n", "<Space>bcl", "<Cmd>BufferCloseBuffersLeft<CR>", opts)
+		map("n", "<Space>bcr", "<Cmd>BufferCloseBuffersRight<CR>", opts)
 		-- Wipeout buffer
 		--                 :BufferWipeout
 		-- Close commands
