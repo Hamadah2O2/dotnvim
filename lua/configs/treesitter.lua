@@ -1,16 +1,32 @@
 require("nvim-treesitter.configs").setup({
+  indent = {
+    enable = true,
+    disable = {
+      "html",
+      "toml",
+      "blade"
+    }
+  },
+
 	-- A list of parser names, or "all" (the five listed parsers should always be installed)
 	ensure_installed = {
 		"html",
+    "scss",
 		"css",
+    "c",
+    "cpp",
 		"php",
 		"javascript",
+    "typescript",
+    "tsx",
 		"json",
-		"dart",
 		"lua",
+    "gotmpl",
 		"vim",
 		"vimdoc",
 		"query",
+    "toml",
+    "yaml",
 		"markdown",
 		"markdown_inline",
 	},
