@@ -59,7 +59,11 @@ return {
             color_square_width = 2,
           })
         end
-      }
+      },
+
+      -- tailwind to css 
+      "jcha0713/cmp-tw2css",
+
     },
     config = function ()
       require('configs.cmp')
