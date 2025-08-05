@@ -174,6 +174,7 @@ return {
 		-- Close buffer
 		map("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
 		map("n", "<Space>bca", "<Cmd>BufferCloseAllButCurrent<CR>", opts)
+		map("n", "<Space>bcp", "<Cmd>BufferCloseAllButPinned<CR>", opts)
 		map("n", "<Space>bcl", "<Cmd>BufferCloseBuffersLeft<CR>", opts)
 		map("n", "<Space>bcr", "<Cmd>BufferCloseBuffersRight<CR>", opts)
 		-- Wipeout buffer
