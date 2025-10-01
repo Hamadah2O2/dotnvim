@@ -4,7 +4,7 @@ return {
 	keys = {
 		{
 			"<leader>w",
-			":WinShift<cr>",
+			"<CMD>WinShift<cr>",
 			desc = "Windows Shifting",
 		},
 	},

@@ -16,6 +16,7 @@ conform.setup({
     markdown = { "prettierd", "prettier", stop_after_first = true },
     erb = { "htmlbeautifier" },
     html = { "prettierd" },
+    htmlhugo = { "prettierd" },
     bash = { "beautysh" },
     proto = { "buf" },
     rust = { "rustfmt" },

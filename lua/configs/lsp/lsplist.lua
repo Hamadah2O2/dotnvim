@@ -14,12 +14,17 @@ local capabilitiesHtml = vim.lsp.protocol.make_client_capabilities()
 local servers = {
     -- Webdev Language Servers
     html = {
-        filetypes = { "html", "php", "blade" },
+        filetypes = { "html", "php", "blade", "htmlhugo" },
         supersaian = true,
         init_options = {
             provideFormatter = true
         },
-        capabilities = capabilities
+        capabilities = capabilities,
+        settings = {
+            suggest = {
+                paths = false, -- Disable path autocomplete
+            },
+        },
     },
     eslint = {
         autostart = false,
@@ -33,13 +38,29 @@ local servers = {
     },
     tailwindcss = {
         autostart = false,
+        filetypes = { "html", "php", "blade", "htmlhugo" },
         capabilities = capabilities,
+        settings = {
+            tailwindCSS = {
+                classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
+                includeLanguages = {
+                    eelixir = "html-eex",
+                    elixir = "phoenix-heex",
+                    eruby = "erb",
+                    heex = "phoenix-heex",
+                    htmlangular = "html",
+                    templ = "html",
+                    htmlhugo = "html"
+                },
+                validate = true
+            }
+        }
     },
     intelephense = {
         capabilities = capabilities,
     },
     emmet_language_server = {
-        filetypes = { "astro", "blade", "css", "eruby", "html", "htmldjango", "javascriptreact", "less", "pug", "sass", "scss", "svelte", "typescriptreact", "vue", "htmlangular", "php" },
+        filetypes = { "astro", "blade", "css", "eruby", "html", "htmldjango", "javascriptreact", "less", "pug", "sass", "scss", "svelte", "typescriptreact", "vue", "htmlangular", "php", "htmlhugo" },
         capabilities = capabilities,
     },
     -- Go Language Server
