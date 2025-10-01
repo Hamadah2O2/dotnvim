@@ -6,7 +6,6 @@ return {
   -- Lsp
   {
     "neovim/nvim-lspconfig",
-    event = {"BufReadPre", "BufNewFile"},
     dependencies = {
       'hrsh7th/cmp-nvim-lsp'
     },
@@ -49,7 +48,10 @@ return {
       'hrsh7th/cmp-calc',
       -- luasnip
       "saadparwaiz1/cmp_luasnip",
-      "Jezda1337/nvim-html-css",
+
+      -- lsp kind
+      'onsails/lspkind.nvim',
+      
       -- tailwindcss-colorizer-cmp
       {
         "roobert/tailwindcss-colorizer-cmp.nvim",
@@ -112,6 +114,11 @@ return {
       vim.keymap.set({"i", "s"}, "<C-E>", function()
         if ls.choice_active() then
           ls.change_choice(1)
+        end
+      end, {silent = true})
+      vim.keymap.set({"i", "s"}, "<C-H>", function()
+        if ls.choice_active() then
+          ls.change_choice(-1)
         end
       end, {silent = true})
     end

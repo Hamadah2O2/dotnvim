@@ -44,7 +44,20 @@ cmp.setup({
     { name = 'calc' },
     { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.
-    { name = 'buffer' },
+    {
+      name = 'buffer',
+      option = {
+        get_bufnrs = function()
+          local bufs = {}
+          for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+            if vim.fn.buflisted(buf) == 1 then
+              table.insert(bufs, buf)
+            end
+          end
+          return bufs
+        end
+      }
+    },
     { name = 'path' },
     -- { name = 'vsnip' }, -- For vsnip users.
     -- { name = 'snippy' }, -- For snippy users.
