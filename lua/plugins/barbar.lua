@@ -28,7 +28,7 @@ return {
 			clickable = true,
 
 			-- Excludes buffers from the tabline
-			exclude_ft = {},
+			exclude_ft = { "mysql" },
 			exclude_name = { "package.json" },
 
 			-- A buffer to this direction will be focused (if it exists) when closing the current buffer.
@@ -36,7 +36,7 @@ return {
 			focus_on_close = "left",
 
 			-- Hide inactive buffers and file extensions. Other options are `alternate`, `current`, and `visible`.
-			-- hide = {extensions = true, inactive = true},
+			-- hide = { alternate = true },
 
 			-- Disable highlighting alternate buffers
 			highlight_alternate = false,

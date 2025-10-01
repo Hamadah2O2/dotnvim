@@ -78,6 +78,14 @@ cmp.setup({
   })
 )
 equire("cmp_git").setup() ]]-- 
+cmp.setup.filetype('sql', {
+  sources = cmp.config.sources({
+    { name = 'luasnip' },
+    { name = 'vim-dadbod-completion' },
+    { name = 'calc' },
+    { name = 'buffer' },
+  })
+})
 
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline({ '/', '?' }, {
