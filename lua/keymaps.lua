@@ -1,10 +1,12 @@
 local map = vim.keymap.set
-local opt1 = { noremap = true, silent = true }
+local opt = { noremap = true, silent = true }
 vim.g.mapleader = " "
 
 -- ###################
 -- #### KeyMaping ####
 -- ###################
+
+opt.desc = ""
 
 map("i", "jj", "<esc>", {})
 map({ "n", "v" }, ";", ":", {})
@@ -15,23 +17,35 @@ map({ "n", "i", "v" }, "<C-q>", "<esc>:q<cr>", {
 })
 
 -- TabNavigate
-map("n", "<A-[>", ":tabNext<CR>", opt1)
-map("n", "<A-]>", ":tabnext<CR>", opt1)
-map("n", "<A-S-t>", ":tabnew<CR>", opt1)
+map("n", "<A-[>", "<cmd>tabNext<CR>", opt)
+map("n", "<A-]>", "<cmd>tabnext<CR>", opt)
+map("n", "<A-S-t>", "<cmd>tabnew<CR>", opt)
 
 -- Soft line navigate
-map("n", "<Down>", "gj", opt1)
-map("n", "<Up>", "gk", opt1)
-map("i", "<Down>", "<C-o>gj", opt1)
-map("i", "<Up>", "<C-o>gk", opt1)
-map("n", "j", "gj", opt1)
-map("n", "k", "gk", opt1)
+map("n", "<Down>", "gj", opt)
+map("n", "<Up>", "gk", opt)
+map("i", "<Down>", "<C-o>gj", opt)
+map("i", "<Up>", "<C-o>gk", opt)
+map("n", "j", "gj", opt)
+map("n", "k", "gk", opt)
 
 -- Php Arrow
-map("i", "-.", "->", opt1)
+opt.desc = "php ->"
+map("i", "-.", "->", opt)
+opt.desc = "php =>"
+map("i", "=.", "=>", opt)
+
+-- Go short declaration
+opt.desc = "go :="
+map("i", ";=", ":=", opt)
 
 -- Save
-map("n", "s", ":w<CR>", opt1)
+opt.desc = "Save File"
+map("n", "s", ":w<CR>", opt)
+
+-- Buffer Toggle 
+opt.desc = "Toggle Last 2 Buffer"
+map("n", "<leader><Tab>", ":b#<CR>", opt)
 
 -- insert navigation
 -- map("i", "<C-k>", "<Up>", opt1)

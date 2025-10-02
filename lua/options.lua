@@ -5,10 +5,10 @@ o.ignorecase = true         -- case insensitive
 o.mouse = "v"               -- middle-click paste with
 o.hlsearch = true           -- highlight search
 o.incsearch = true          -- incremental search
-o.tabstop = 2               -- number of columns occupied by a tab
-o.softtabstop = 2           -- see multiple spaces as tabstops so <BS> do>
+o.tabstop = 4               -- number of columns occupied by a tab
+o.softtabstop = 4           -- see multiple spaces as tabstops so <BS> do>
 o.expandtab = true          -- converts tabs to white space
-o.shiftwidth = 2            -- width for autoinden:s
+o.shiftwidth = 4            -- width for autoinden:s
 o.autoindent = true         -- indent a new line the same amount as the l>
 o.smartindent = true
 o.number = true             -- add line numbers
@@ -46,6 +46,9 @@ vim.opt.updatetime = 300
 vim.opt.signcolumn = "yes"
 
 o.laststatus = 3 -- just one status line pls
+
+-- enable loader
+vim.loader.enable()
 
 vim.cmd([[filetype plugin indent on]])
 vim.cmd([[filetype plugin on]])
