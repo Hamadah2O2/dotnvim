@@ -91,6 +91,13 @@ local servers = {
                 telemetry = { enable = false },
             },
         },
+    },
+    -- python
+    pylsp =  {
+        capabilities = capabilities,
+    },
+    clangd = {
+        capabilities = capabilities,
     }
 }
 

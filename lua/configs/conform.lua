@@ -24,6 +24,7 @@ conform.setup({
     toml = { "taplo" },
     css = { "prettierd", "prettier", stop_after_first = true },
     scss = { "prettierd", "prettier", stop_after_first = true },
+    c = { "astyle" },
   },
 })
 
